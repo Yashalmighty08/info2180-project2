@@ -1,0 +1,7 @@
+/* Login page only. Owner: Member 1. */
+.login-body { background: #ffffff; }
+.login-box { max-width: 360px; margin: 64px auto; padding: 0 16px; }
+.login-box h1 { text-align: center; font-size: 24px; }
+.login-box .field { margin-bottom: 14px; }
+.login-box input { width: 100%; box-sizing: border-box; }
+.btn-block { width: 100%; }

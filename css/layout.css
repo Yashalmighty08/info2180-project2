@@ -1,0 +1,55 @@
+/* Shared look for every page. Owner: shared kit. Use the variables, never raw colours. */
+:root {
+    --bg: #f5f6f8;
+    --panel: #ffffff;
+    --text: #1f2933;
+    --muted: #6b7280;
+    --line: #e2e8f0;
+    --primary: #2b6cb0;
+    --primary-dark: #234e82;
+    --danger: #c53030;
+    --success: #2f855a;
+    --radius: 6px;
+    --font: system-ui, Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: var(--font); color: var(--text); background: var(--bg); min-height: 100vh; display: flex; flex-direction: column; }
+h1, h2 { margin: 0 0 16px; }
+
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; background: var(--primary); color: #fff; padding: 12px 24px; }
+.brand { font-weight: 700; font-size: 20px; }
+.menu { display: flex; gap: 16px; flex-wrap: wrap; }
+.menu a { color: #fff; text-decoration: none; padding: 4px 8px; border-radius: var(--radius); }
+.menu a:hover, .menu a.active { background: var(--primary-dark); }
+
+.container { flex: 1; width: 100%; max-width: 1000px; margin: 24px auto; padding: 0 16px; }
+.footer { text-align: center; color: var(--muted); padding: 16px; font-size: 14px; }
+
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; margin-bottom: 20px; }
+.page-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+.page-head h1 { margin: 0; }
+
+.btn { display: inline-block; background: var(--primary); color: #fff; border: 0; border-radius: var(--radius); padding: 10px 16px; font: inherit; cursor: pointer; text-decoration: none; }
+.btn:hover { background: var(--primary-dark); }
+.btn-secondary { background: var(--panel); color: var(--primary); border: 1px solid var(--primary); }
+.btn-secondary:hover { background: var(--bg); }
+
+.field { margin-bottom: 14px; }
+.field label { display: block; margin-bottom: 4px; font-weight: 600; }
+input[type=text], input[type=email], input[type=password], input[type=tel], select, textarea {
+    width: 100%; padding: 10px; border: 1px solid var(--line); border-radius: var(--radius); font: inherit; background: #fff;
+}
+input:focus, select:focus, textarea:focus { outline: 2px solid var(--primary); outline-offset: 0; }
+.field-error { display: block; color: var(--danger); font-size: 14px; min-height: 1em; }
+
+.message { margin-top: 12px; padding: 0; }
+.message.error { color: var(--danger); background: #fff5f5; border: 1px solid var(--danger); padding: 10px; border-radius: var(--radius); }
+.message.success { color: var(--success); background: #f0fff4; border: 1px solid var(--success); padding: 10px; border-radius: var(--radius); }
+
+table { border-collapse: collapse; width: 100%; background: var(--panel); }
+th, td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; }
+th { background: #edf2f7; }
+tbody tr:nth-child(even) { background: var(--bg); }
+.table-wrap { overflow-x: auto; }
+.muted { color: var(--muted); }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 13px; background: #edf2f7; }
