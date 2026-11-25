@@ -1,0 +1,3 @@
+/* Notes box only. Owner: Janae */
+.notes .note { border-bottom: 1px solid var(--line); padding: 8px 0 4px; }
+.notes .note p { margin: 4px 0 8px; }
