@@ -1,0 +1,35 @@
+/* Contact details screen only. Owner: Part 4. Uses the shared variables from css/layout.css. */
+
+.contact-head { align-items: flex-start; }
+.contact-title { display: flex; align-items: center; gap: 12px; }
+.contact-avatar {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--line); font-size: 22px; flex-shrink: 0;
+}
+.contact-meta { margin: 4px 0 0; font-size: 14px; line-height: 1.5; }
+
+.contact-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.contact-actions .btn:disabled { opacity: 0.6; cursor: default; }
+.btn-assign { background: var(--success); }
+.btn-assign:hover:not(:disabled) { background: var(--success); filter: brightness(0.9); }
+.btn-switch { background: var(--panel); color: var(--text); border: 1px solid var(--line); }
+.btn-switch:hover:not(:disabled) { background: var(--bg); }
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 24px;
+    margin: 0;
+}
+.contact-grid dt { font-size: 14px; color: var(--muted); margin-bottom: 2px; }
+.contact-grid dd { margin: 0; font-weight: 600; overflow-wrap: anywhere; }
+
+#contact-msg:empty { display: none; }
+#contact-msg { margin: 0 0 16px; }
+
+@media (max-width: 600px) {
+    .contact-grid { grid-template-columns: 1fr; }
+    .contact-actions { width: 100%; }
+    .contact-actions .btn { flex: 1; }
+}
